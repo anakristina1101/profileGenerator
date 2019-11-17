@@ -27,11 +27,12 @@ inquirer
             console.log(response);
 
 
-            fs.writeFile("profile.html", queryURL, (err) => {
+            fs.writeFile("profile.html", profile, (err) => {
                 if (err) {
-                    return console.log(err);
-                } else {
-                    const doc = new pdf;
+                    return err;
+                } 
 
-
-                
+                console.log ("profile written");
+            });
+        });
+    })
